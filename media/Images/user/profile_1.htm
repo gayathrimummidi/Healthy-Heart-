@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Healthy Heart-Rate Risk Prediction</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/mainstatic/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/static/mainstatic/css/animate.css">
+    
+    <link rel="stylesheet" href="/static/mainstatic/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/static/mainstatic/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/static/mainstatic/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="/static/mainstatic/css/aos.css">
+
+    <link rel="stylesheet" href="/static/mainstatic/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="/static/mainstatic/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/static/mainstatic/css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="/static/mainstatic/css/flaticon.css">
+    <link rel="stylesheet" href="/static/mainstatic/css/icomoon.css">
+    <link rel="stylesheet" href="/static/mainstatic/css/style.css">
+
+    <link rel="stylesheet" 
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" 
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" 
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" 
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" 
+        crossorigin="anonymous"></script>
+
+		<!-- <style>
+			h2 {
+			  text-shadow: 2px 2px royalblue;
+			}
+			</style> -->
+
+  </head>
+  <body>
+    <nav style="height: 100px;" class="navbar py-4 navbar-expand-lg ftco_navbar navbar-primary bg-primary flex-row">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-3 px-md-0">
+    			<div class="col-lg-2 pr-4 align-items-center">
+		    		<a style="font-size: 40px;" class="navbar-brand" href="/home">Dr.<span style="color:white">care</span></a>
+	    		</div>
+	    		<div class="col-lg-10 d-none d-md-block">
+		    		<div class="row d-flex">
+			    		<div class="col-md-4 pr-4 d-flex topper align-items-center">
+			    			<div class="icon bg-primary mr-2 d-flex justify-content-center align-items-center"><span class="icon-map" style="color:orange;"></span></div>
+						    <span style="font-weight: bold;color:#ffffff" class="text" >Address:  Hyderabad, Telangana</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-primary mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane" style="color:red;"></span></div>
+						    <span style="font-weight: bold;color:#ffffff" class="text">Email: projects@codebook.in</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon bg-primary mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2" style="color:green;"></span></div>
+						    <span style="font-weight: bold;color:#ffffff" class="text">Phone: 085558 87986</span>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </nav>
+	  <nav style="height: 100px;" class="navbar navbar-expand-lg navbar-light bg-light ftco-navbar-light" id="ftco-navbar">
+	    <div class="container d-flex align-items-center">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav mr-auto">
+	        	<li class="nav-item "><a style="font-size: 20px;" href="/dashboard" class="nav-link pl-0">Dashboaard</a></li>
+	        	<li class="nav-item active"><a style="font-size: 20px;" href="/profile" class="nav-link">Profile</a></li>
+	        	<li class="nav-item"><a style="font-size: 20px;" href="/predict" class="nav-link">Predict</a></li>
+	        	<li class="nav-item"><a style="font-size: 20px;" href="/result" class="nav-link">Result</a></li>
+	          <li class="nav-item"><a style="font-size: 20px;" href="/login" class="nav-link">Logout</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <div class="text-center main-container col-12 d-flex flex-row justify-content-evenly">
+        <div class="card image-container col-4 text-center mb-5" style="box-shadow: 1px 0px 8px 0px rgb(129, 133, 244);margin-top: 100px;"><br>
+            <img src="/static/mainstatic/bluee.png" class="m-auto" style="border-radius: 50%; width:210px; height:210px;"/>
+            <h5 style="font-size: 45px; font-family:'Courier New', Courier, monospace">User Name</h5><br>
+            <div class="col-6 m-auto">
+                <label style="margin-left:-106px;">Upload Profle Pic: </label>
+                <input type="file" class="form-control mb-2"  required/><br>
+                <input type="submit" value="Submit" class="btn btn-primary mb-5"/>             
+            </div><br>
+        </div>
+        <div class="form-container col-5 mb-5" style="margin-top:100px;">
+            <form method = 'post' enctype = 'multipart/form-data' name = 'myForm' onsubmit="return submitForm();">
+              <input type="hidden" name="csrfmiddlewaretoken" value="TEmsNkp3OXUwrjE6dElotEAa9XVE44shrwkxUTYTP4E33AWA7r9dLjbyyKUfYGqi">
+                <div class="card" style="box-shadow: 1px 0px 8px 0px rgb(129, 133, 244);">
+                    <div class="row card-body">
+                        <h1 class="h1 mt-3 mb-4" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">My Profile</h1>
+                        <div class="">
+                                <label class="d-flex text-left">User Name:</label>
+                                <input style="box-shadow: 1px 0px 8px 0px rgb(165, 167, 237) !important;" name= 'uname' class = 'form-control' type = 'text' value="Vinay Kumare"/><br>
+                                <label class="d-flex text-left">Phone Number:</label>
+                                <input style=" box-shadow: 1px 0px 8px 0px rgb(165, 167, 237) !important;" name= 'uphone' type = 'number' class="form-control" value="2147483647"/><br>
+                                <label class="d-flex text-left">Email:</label>
+                                <input style=" box-shadow: 1px 0px 8px 0px rgb(165, 167, 237) !important;" name= 'uemail' type = 'email' class="form-control" value= "vi@gmail.com"/><br>
+                                <label class="d-flex text-left">Age:</label>
+                                <input style=" box-shadow: 1px 0px 8px 0px rgb(165, 167, 237) !important;" name= 'uage' type = 'number' class="form-control" value="25"/><br>
+                                <label class="d-flex text-left">Adress:</label>
+                                <input style=" box-shadow: 1px 0px 8px 0px rgb(165, 167, 237) !important;" name= 'uaddress' type = 'text' class="form-control" value="Hyderabad"/><br>
+                        </div>
+                        
+                        <div class="btn-d">
+                            <input type="submit" class="btn btn-warning mt-3 button" value="Edit">
+                            <br>
+                        </div>   
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <footer class="col-12 ftco-footer ftco-bg-dark ftco-section justify-content-between">
+      <div class="container">
+        <div class="row d-flex ">
+        <div class="d-flex">
+          <div class=" col-2 ftco-footer-widget mb-5 ml-5">
+          <h2 style="text-align: center; margin-left: -250px;" class="ftco-heading-2 logo">Dr.<span>care</span></h2>
+          <p style="margin-left: -150px;">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          </div>
+          <div class="ftco-footer-widget" style="margin-left: 200px;" >
+            <h2 style="text-align: center; color:royalblue" class="ftco-heading-2">Have a Questions?</h2>
+            <div class="block-23 mb-3">
+            <ul>
+              <li><a href="#"></a><span class="icon icon-map-marker" style="color: red;"></span><p style="text-align: center;"> Hyderabad, Telangana </p></li>
+              <li><a><span class="icon icon-phone" style="color: green;"></span><span style="text-align: center;"  class="text">085558 87986</span></a></li>
+              <li ><a><span class="icon icon-envelope" style="color: yellow;"></span><span style="text-align: center;" class="text">projects@codebook.in</span></a></li>
+            </ul>
+            </div>
+          </div>
+        
+        <div class="col-4" >
+          <div class="ftco-footer-widget" style="margin-left: 150px;">
+          <h2 style="color: royalblue; text-align: center;" class="ftco-heading-2">Links</h2>
+          <ul class="list-unstyled">
+            <li style="text-align: center;"><a href="/home"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+            <li style="text-align: center;"><a href="/login"><span class="ion-ios-arrow-round-forward mr-2"></span>User</a></li>
+            <li style="text-align: center;"><a href="/admin"><span class="ion-ios-arrow-round-forward mr-2"></span>Admin</a></li>
+            <li style="text-align: center;"><a href="/about"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
+            <li style="text-align: center;"><a href="/contact"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+          </ul>
+          </div>
+        </div>
+           
+          </div>
+        </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-12 text-center"><br><br>
+    
+          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This project is made with <i class="icon-heart" style="color: red;" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">codebook</a>
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+        </div>
+        </div>
+      </div>
+      </footer>
+  
+      <!-- loader -->
+      <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+      
+      
+      <script src="/static/mainstatic/js/jquery.min.js"></script>
+      <script src="/static/mainstatic/js/jquery-migrate-3.0.1.min.js"></script>
+      <script src="/static/mainstatic/js/popper.min.js"></script>
+      <script src="/static/mainstatic/js/bootstrap.min.js"></script>
+      <script src="/static/mainstatic/js/jquery.easing.1.3.js"></script>
+      <script src="/static/mainstatic/js/jquery.waypoints.min.js"></script>
+      <script src="/static/mainstatic/js/jquery.stellar.min.js"></script>
+      <script src="/static/mainstatic/js/owl.carousel.min.js"></script>
+      <script src="/static/mainstatic/js/jquery.magnific-popup.min.js"></script>
+      <script src="/static/mainstatic/js/aos.js"></script>
+      <script src="/static/mainstatic/js/jquery.animateNumber.min.js"></script>
+      <script src="/static/mainstatic/js/bootstrap-datepicker.js"></script>
+      <script src="/static/mainstatic/js/jquery.timepicker.min.js"></script>
+      <script src="/static/mainstatic/js/scrollax.min.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+      <script src="/static/mainstatic/js/google-map.js"></script>
+      <script src="/static/mainstatic/js/main.js"></script>
+        
+      </body>
+      </html>
